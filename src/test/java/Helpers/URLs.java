@@ -11,5 +11,6 @@ public class URLs {
     public static final String udemyXpathURL = "https://www.udemy.com/course/xpath-locators-for-selenium/";
     public static final String udemySeleniumURL = "https://www.udemy.com/course/selenium-for-beginners/";
     public static final String privacyPolicyURL = "https://practicetestautomation.com/privacy-policy/";
+    public static final String exceptionsURL = "https://practicetestautomation.com/practice-test-exceptions/";
 
 }

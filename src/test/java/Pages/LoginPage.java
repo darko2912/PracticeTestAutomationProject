@@ -22,6 +22,9 @@ public class LoginPage extends BaseTest {
     @FindBy(id = "error")
     public WebElement errorMessage;
 
+    @FindBy(id = "form")
+    public WebElement loginForm;
+
     //----------------------------------
 
     public void inputUsername(String username){
@@ -36,5 +39,15 @@ public class LoginPage extends BaseTest {
 
     public void clickOnSubmitButton(){
         submitButton.click();
+    }
+    //Method for the visibility login form
+    public boolean loginFormIsVisible(){
+        boolean isPresent = false;
+        try {
+            isPresent = loginForm.isDisplayed();
+        } catch (Exception e) {
+
+        }
+        return isPresent;
     }
 }

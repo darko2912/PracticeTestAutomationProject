@@ -29,6 +29,7 @@ public class BaseTest {
     public CoursesPage coursesPage;
     public BlogPage blogPage;
     public ContactPage contactPage;
+    public ExceptionsPage exceptionsPage;
 
     @BeforeClass
     public void setUp() throws IOException {
@@ -41,6 +42,7 @@ public class BaseTest {
         coursesPage = new CoursesPage();
         blogPage = new BlogPage();
         contactPage = new ContactPage();
+        exceptionsPage = new ExceptionsPage();
 
     }
 
