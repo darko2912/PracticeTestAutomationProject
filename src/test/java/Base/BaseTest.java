@@ -55,14 +55,19 @@ public class BaseTest {
     }
     //Method for setting focus on a specific tab.
     public void switchTab(int tab){
-        ArrayList<String> listaTabova = new ArrayList<>(driver.getWindowHandles());
-        driver.switchTo().window(listaTabova.get(tab));
+        ArrayList<String> listTab = new ArrayList<>(driver.getWindowHandles());
+        driver.switchTo().window(listTab.get(tab));
     }
-    //Method for waiting a visibility of element
+    //Method to delete a tab and return to the first tab.
+    public void deleteTab(){
+        driver.close();
+        switchTab(0);
+    }
+    //Method to waiting for the visibility of the element.
     public void waitForVisibility(WebElement element) {
         wait.until(ExpectedConditions.visibilityOf(element));
     }
-    //Methode for waiting a clickability of element
+    //Methode to waiting for the clickability of the element.
     public void waitForClickability(WebElement element) {
         wait.until(ExpectedConditions.elementToBeClickable(element));
     }

@@ -148,6 +148,7 @@ public class LoginTest extends BaseTest {
         practicePage.clickOnTestLoginPage();
         sidebar.clickOnHomeLink();
 
+        Assert.assertTrue(sidebar.homeLink.getAttribute("class").contains("current-menu-item"));
         Assert.assertEquals(driver.getCurrentUrl(), homepageURL);
         Assert.assertEquals(homepagePage.homepageTitle.getText(), homepageTitle);
     }
@@ -158,6 +159,7 @@ public class LoginTest extends BaseTest {
         practicePage.clickOnTestLoginPage();
         sidebar.clickOnPracticeLink();
 
+        Assert.assertTrue(sidebar.practiceLink.getAttribute("class").contains("current-menu-item"));
         Assert.assertEquals(driver.getCurrentUrl(), practiceURL);
         Assert.assertEquals(practicePage.practiceTitle.getText(), practiceTitle);
     }
@@ -168,6 +170,7 @@ public class LoginTest extends BaseTest {
         practicePage.clickOnTestLoginPage();
         sidebar.clickOnCoursesLink();
 
+        Assert.assertTrue(sidebar.coursesLink.getAttribute("class").contains("current-menu-item"));
         Assert.assertEquals(driver.getCurrentUrl(), coursesURL);
         Assert.assertEquals(coursesPage.coursesTitle.getText(), coursesTitle);
     }
@@ -178,6 +181,7 @@ public class LoginTest extends BaseTest {
         practicePage.clickOnTestLoginPage();
         sidebar.clickOnBlogLink();
 
+        Assert.assertTrue(sidebar.blogLink.getAttribute("class").contains("current-menu-item"));
         Assert.assertEquals(driver.getCurrentUrl(), blogURL);
         Assert.assertEquals(blogPage.blogTitle.getText(), blogTitle);
     }
@@ -188,6 +192,7 @@ public class LoginTest extends BaseTest {
         practicePage.clickOnTestLoginPage();
         sidebar.clickOnContactLink();
 
+        Assert.assertTrue(sidebar.contactLink.getAttribute("class").contains("current-menu-item"));
         Assert.assertEquals(driver.getCurrentUrl(), contactURL);
         Assert.assertEquals(contactPage.contactTitle.getText(), contactTitle);
     }
