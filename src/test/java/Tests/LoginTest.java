@@ -78,6 +78,32 @@ public class LoginTest extends BaseTest {
     }
 
     @Test(priority = 40, retryAnalyzer = RetryAnalyzer.class)
+    public void userCannotLoginWithEmptyPasswordField(){
+        sidebar.clickOnPracticeLink();
+        practicePage.clickOnTestLoginPage();
+        loginPage.inputUsername(validUsername);
+        loginPage.inputPassword("");
+        loginPage.clickOnSubmitButton();
+
+        Assert.assertEquals(driver.getCurrentUrl(), loginURL);
+        Assert.assertFalse(loggedPage.logoutButtonIsVisible());
+        Assert.assertEquals(loginPage.errorMessage.getText(), passwordIsInvalid);
+    }
+
+    @Test(priority = 50, retryAnalyzer = RetryAnalyzer.class)
+    public void userCannotLoginWithEmptyUsernameField(){
+        sidebar.clickOnPracticeLink();
+        practicePage.clickOnTestLoginPage();
+        loginPage.inputUsername("");
+        loginPage.inputPassword(validPassword);
+        loginPage.clickOnSubmitButton();
+
+        Assert.assertEquals(driver.getCurrentUrl(), loginURL);
+        Assert.assertFalse(loggedPage.logoutButtonIsVisible());
+        Assert.assertEquals(loginPage.errorMessage.getText(), usernameIsInvalid);
+    }
+
+    @Test(priority = 60, retryAnalyzer = RetryAnalyzer.class)
     public void userCannotLoginWithInvalidUsername(){
         for (int i=1; i<= excelReader.getLastRow("Login"); i++){
             String invalidUsername = excelReader.getStringData("Login", i,2);
@@ -95,7 +121,7 @@ public class LoginTest extends BaseTest {
         }
     }
 
-    @Test(priority = 50, retryAnalyzer = RetryAnalyzer.class)
+    @Test(priority = 70, retryAnalyzer = RetryAnalyzer.class)
     public void userCannotLoginWithInvalidPassword(){
         for (int i=1; i<= excelReader.getLastRow("Login"); i++){
             String invalidPassword = excelReader.getStringData("Login", i,3);
@@ -113,7 +139,7 @@ public class LoginTest extends BaseTest {
         }
     }
 
-    @Test(priority = 60, retryAnalyzer = RetryAnalyzer.class)
+    @Test(priority = 80, retryAnalyzer = RetryAnalyzer.class)
     public void userCannotLoginWithInvalidUsernameAndPassword(){
         for (int i=1; i<= excelReader.getLastRow("Login"); i++){
             String invalidUsername = excelReader.getStringData("Login", i,2);
@@ -132,7 +158,7 @@ public class LoginTest extends BaseTest {
         }
     }
 
-    @Test(priority = 70, retryAnalyzer = RetryAnalyzer.class)
+    @Test(priority = 90, retryAnalyzer = RetryAnalyzer.class)
     public void logoLinkSuccessfullyRedirectedFromLoginPageToHomepage(){
         sidebar.clickOnPracticeLink();
         practicePage.clickOnTestLoginPage();
@@ -142,7 +168,7 @@ public class LoginTest extends BaseTest {
         Assert.assertEquals(homepagePage.homepageTitle.getText(), homepageTitle);
     }
 
-    @Test(priority = 80, retryAnalyzer = RetryAnalyzer.class)
+    @Test(priority = 100, retryAnalyzer = RetryAnalyzer.class)
     public void userCanRedirectedFromLoginPageToHomeUsingSidebarMenu(){
         sidebar.clickOnPracticeLink();
         practicePage.clickOnTestLoginPage();
@@ -153,7 +179,7 @@ public class LoginTest extends BaseTest {
         Assert.assertEquals(homepagePage.homepageTitle.getText(), homepageTitle);
     }
 
-    @Test(priority = 90, retryAnalyzer = RetryAnalyzer.class)
+    @Test(priority = 110, retryAnalyzer = RetryAnalyzer.class)
     public void userCanRedirectedFromLoginPageToPracticeUsingSidebarMenu(){
         sidebar.clickOnPracticeLink();
         practicePage.clickOnTestLoginPage();
@@ -164,7 +190,7 @@ public class LoginTest extends BaseTest {
         Assert.assertEquals(practicePage.practiceTitle.getText(), practiceTitle);
     }
 
-    @Test(priority = 100, retryAnalyzer = RetryAnalyzer.class)
+    @Test(priority = 120, retryAnalyzer = RetryAnalyzer.class)
     public void userCanRedirectedFromLoginPageToCoursesUsingSidebarMenu(){
         sidebar.clickOnPracticeLink();
         practicePage.clickOnTestLoginPage();
@@ -175,7 +201,7 @@ public class LoginTest extends BaseTest {
         Assert.assertEquals(coursesPage.coursesTitle.getText(), coursesTitle);
     }
 
-    @Test(priority = 110, retryAnalyzer = RetryAnalyzer.class)
+    @Test(priority = 130, retryAnalyzer = RetryAnalyzer.class)
     public void userCanRedirectedFromLoginPageToBlogUsingSidebarMenu(){
         sidebar.clickOnPracticeLink();
         practicePage.clickOnTestLoginPage();
@@ -186,7 +212,7 @@ public class LoginTest extends BaseTest {
         Assert.assertEquals(blogPage.blogTitle.getText(), blogTitle);
     }
 
-    @Test(priority = 120, retryAnalyzer = RetryAnalyzer.class)
+    @Test(priority = 140, retryAnalyzer = RetryAnalyzer.class)
     public void userCanRedirectedFromLoginPageToContactUsingSidebarMenu(){
         sidebar.clickOnPracticeLink();
         practicePage.clickOnTestLoginPage();
