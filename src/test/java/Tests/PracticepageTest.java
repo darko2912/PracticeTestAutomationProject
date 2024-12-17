@@ -31,7 +31,6 @@ public class PracticepageTest extends BaseTest {
 
         driver.navigate().to(homepageURL);
 
-        excelReader = new ExcelReader("TestData.xlsx");
         homepagePage = new HomepagePage();
         practicePage = new PracticePage();
         sidebar = new Sidebar();
@@ -107,6 +106,6 @@ public class PracticepageTest extends BaseTest {
     @AfterMethod
     public void tearDownTest(){
         driver.manage().deleteAllCookies();
-        //driver.quit();
+        driver.quit();
     }
 }

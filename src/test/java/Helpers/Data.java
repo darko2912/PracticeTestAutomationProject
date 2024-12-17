@@ -10,6 +10,10 @@ public class Data extends BaseTest {
     public static final String validPassword = excelReader.getStringData("Login", 1,1);
     //Successfully messages
     public static final String loggedMessage = "Logged In Successfully";
+    public static final String savedRow1 = "Row 1 was saved";
+    public static final String savedRow2 = "Row 2 was saved";
+    public static final String addedRow2 = "Row 2 was added";
+    public static final String removedRow2 = "Row 2 was removed";
     //Error messages
     public static final String usernameIsInvalid = "Your username is invalid!";
     public static final String passwordIsInvalid = "Your password is invalid!";
