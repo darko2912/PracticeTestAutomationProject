@@ -12,7 +12,7 @@ Practice Test Automation is a website for testing purposes where the main goal i
 Open terminal in IDE and git clone the repository
 
 ```
-git clone https://github.com/darko2912/PracticeTestAutomaionProject.git
+git clone https://github.com/darko2912/PracticeTestAutomationProject.git
 ```
 * java version "21" 2023-09-19 LTS
 
