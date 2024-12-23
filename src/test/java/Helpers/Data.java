@@ -2,8 +2,6 @@ package Helpers;
 
 import Base.BaseTest;
 
-import java.util.ArrayList;
-
 public class Data extends BaseTest {
     //Valid credentials for log in
     public static final String validUsername = excelReader.getStringData("login", 1,0);
@@ -23,7 +21,6 @@ public class Data extends BaseTest {
     public static final String homepageTitle = "Hello";
     public static final String practiceTitle = "Practice";
     public static final String coursesTitle = "Courses";
-    public static final String blogTitle = "Unlock Your Future: Selenium WebDriver Career Launcher Part 6";
     public static final String contactTitle = "Contact";
     public static final String confirmTitle = "Confirm you’re not a robot";
     //Valid credentials for signing up for the newsletter
@@ -38,4 +35,26 @@ public class Data extends BaseTest {
     public static final String link6 = "BLOG";
     public static final String link7 = "COURSES";
     public static final String link8 = "privacy policy";
+    //Title of blogs
+    public static final String page1Blog1 = "Unlock Your Future: Selenium WebDriver Career Launcher Part 6";
+    public static final String page1Blog2 = "Unlock Your Future: Selenium WebDriver Career Launcher Part 5";
+    public static final String page1Blog3 = "Unlock Your Future: Selenium WebDriver Career Launcher Part 4";
+    public static final String page1Blog4 = "Unlock Your Future: Selenium WebDriver Career Launcher Part 3";
+    public static final String page1Blog5 = "Unlock Your Future: Selenium WebDriver Career Launcher Part 2";
+    public static final String page1Blog6 = "Unlock Your Future: Selenium WebDriver Career Launcher Part 1";
+    public static final String page1Blog7 = "Headless Browser Testing with Selenium: Elevate Your Expertise";
+    public static final String page1Blog8 = "Unlock the Potential: Mastering the Test Automation Pyramid";
+    public static final String page1Blog9 = "Unusual Uses for Selenium WebDriver";
+    public static final String page1Blog10 = "Starting with Selenium WebDriver and Java: An Overview for Beginners";
+    public static final String page2Blog1 = "How to deal with Element is not clickable at point exception";
+    public static final String page2Blog2 = "Hard and Soft Assertions in test automation";
+    public static final String page2Blog3 = "How to find cheap flights with Selenium to save time";
+    public static final String page2Blog4 = "Best Books For Software Testers";
+    public static final String page2Blog5 = "Stop automating everything with Selenium";
+    public static final String page2Blog6 = "DevOps 101 for Testers";
+    public static final String page2Blog7 = "Postman RestAPI Testing";
+    public static final String page2Blog8 = "Selenium WebDriver and Browser alerts";
+    public static final String page2Blog9 = "Checkboxes and radio buttons with Selenium";
+    public static final String page2Blog10 = "Why XPath Locator strategy?";
+    public static final String page3Blog1 = "Selenium Grid | Jenkins";
 }

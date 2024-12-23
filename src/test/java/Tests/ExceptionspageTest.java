@@ -78,7 +78,6 @@ public class ExceptionspageTest extends BaseTest {
 
         Assert.assertTrue(sidebar.blogLink.getAttribute("class").contains("current-menu-item"));
         Assert.assertEquals(driver.getCurrentUrl(), blogURL);
-        Assert.assertEquals(blogPage.blogTitle.getText(), blogTitle);
     }
 
     @Test (priority = 50, retryAnalyzer = RetryAnalyzer.class)

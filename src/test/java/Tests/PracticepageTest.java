@@ -71,7 +71,6 @@ public class PracticepageTest extends BaseTest {
 
         Assert.assertTrue(sidebar.blogLink.getAttribute("class").contains("current-menu-item"));
         Assert.assertEquals(driver.getCurrentUrl(), blogURL);
-        Assert.assertEquals(blogPage.blogTitle.getText(), blogTitle);
     }
 
     @Test(priority = 40, retryAnalyzer = RetryAnalyzer.class)
