@@ -12,17 +12,20 @@ public class Data extends BaseTest {
     public static final String savedRow2 = "Row 2 was saved";
     public static final String addedRow2 = "Row 2 was added";
     public static final String removedRow2 = "Row 2 was removed";
+    public static final String confirmationMessage = "Thanks for contacting us! We will be in touch with you shortly.";
     //Error messages
     public static final String usernameIsInvalid = "Your username is invalid!";
     public static final String passwordIsInvalid = "Your password is invalid!";
     public static final String requiredField = "This field is required.";
     public static final String invalidEmailMessage = "This value should be a valid email.";
+    public static final String recaptchaError = "Google reCAPTCHA verification failed, please try again later.";
+    public static final String errorEmail = "Please enter a valid email address.";
+    public static final String emailSuggestion = "Did you mean ";
     //Title of pages
     public static final String homepageTitle = "Hello";
     public static final String practiceTitle = "Practice";
     public static final String coursesTitle = "Courses";
     public static final String contactTitle = "Contact";
-    public static final String confirmTitle = "Confirm you’re not a robot";
     //Valid credentials for signing up for the newsletter
     public static final String validName = excelReader.getStringData("SubscribeNewsletter",1,0);
     public static final String validEmail = excelReader.getStringData("SubscribeNewsletter", 1,1);
@@ -57,4 +60,9 @@ public class Data extends BaseTest {
     public static final String page2Blog9 = "Checkboxes and radio buttons with Selenium";
     public static final String page2Blog10 = "Why XPath Locator strategy?";
     public static final String page3Blog1 = "Selenium Grid | Jenkins";
+    //Valid credentials for contact form
+    public static final String validFirstName = excelReader.getStringData("Contact", 1,0);
+    public static final String validLastName = excelReader.getStringData("Contact",1,1);
+    public static final String validEmailContact = excelReader.getStringData("Contact",1,2);
+    public static final String comment = excelReader.getStringData("Contact", 1,3);
 }

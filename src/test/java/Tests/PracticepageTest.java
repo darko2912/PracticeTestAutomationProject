@@ -1,7 +1,6 @@
 package Tests;
 
 import Base.BaseTest;
-import Base.ExcelReader;
 import Base.RetryAnalyzer;
 import Pages.*;
 import io.github.bonigarcia.wdm.WebDriverManager;

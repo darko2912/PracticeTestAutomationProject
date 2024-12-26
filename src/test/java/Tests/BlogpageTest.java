@@ -33,8 +33,6 @@ public class BlogpageTest extends BaseTest {
         homepagePage = new HomepagePage();
         practicePage = new PracticePage();
         sidebar = new Sidebar();
-        loginPage = new LoginPage();
-        loggedPage = new LoggedPage();
         coursesPage = new CoursesPage();
         blogPage = new BlogPage();
         contactPage = new ContactPage();
